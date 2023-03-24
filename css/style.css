@@ -1,62 +1,19 @@
 /* contains resets, styling for html and body elements */
-/*
-COLORS:
+/* universal reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+html {
+  /* font-size: 10px; */
+  font-size: 62.5%; }
 
-*/
-/* header initial styling */
-/* clip-path property to make visible only certain portion of background */
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to bottom right, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* determines that the backpart of the element is visible or not */
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-    /* 
-    animation-delay: 3s;
-    animation-iteration-count: 3; 
-    
-    */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    animation: moveInRight 2s ease-out;
-    /* animation-name: moveInRight;
-    animation-duration: 2s;
-    animation-timing-function: ease-out; */ }
+body {
+  padding: 3rem;
+  box-sizing: border-box; }
 
 @keyframes moveInLeft {
   0% {
@@ -85,6 +42,44 @@ Dark green: #28b485
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+/* Project wide font defination */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* determines that the backpart of the element is visible or not */
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    /* 
+      animation-delay: 3s;
+      animation-iteration-count: 3; 
+      
+      */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 2s ease-out;
+    /* animation-name: moveInRight;
+      animation-duration: 2s;
+      animation-timing-function: ease-out; */ }
 
 /* pseudo classes are special states of an element */
 .btn {
@@ -129,3 +124,34 @@ Dark green: #28b485
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
     /* this will automatically apply the styles up to zero percent before the animation starts. */ }
+
+/* header initial styling */
+/* clip-path property to make visible only certain portion of background */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
