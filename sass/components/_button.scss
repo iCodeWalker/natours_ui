@@ -1,6 +1,7 @@
 /* pseudo classes are special states of an element */
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -12,9 +13,14 @@
     /* another way of performing animation: transition property */
     transition: all 0.2s;
     position: relative;
+
+    // change for <button> element
+    border: none;
+    cursor: pointer;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
