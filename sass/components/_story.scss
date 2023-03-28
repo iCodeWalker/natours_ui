@@ -9,6 +9,16 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond-to-viewport(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond-to-viewport(phone) {
+    transform: skewX(0);
+  }
+
   //   & > * {
   //     transform: skewX(12deg);
   //   }
@@ -26,6 +36,10 @@
 
     // --- for figcaption
     position: relative;
+
+    @include respond-to-viewport(phone) {
+      transform: translate(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -37,6 +51,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond-to-viewport(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
