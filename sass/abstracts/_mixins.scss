@@ -4,3 +4,75 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// Media query manager
+/*
+0px - 600px = Phone
+600px - 900px = Tablet Portrait
+900px - 1200px = Tablet Landscape
+1200px - 1800px = laptops [our normal styles apply]
+1800px + = Big Desktop
+*/
+
+// for single breakpoint we have to write like this and have to create more mixins for each breakpoints
+// @mixin respond-phone {
+//   @media (max-width: 600px) {
+//     @content;
+//   }
+// }
+
+// $breakpoint choices
+
+/* 
+- phone
+- tab-por
+- tab-land
+- big-desktop 
+
+*/
+
+// 1em = 16px
+
+/*
+400px = 30em
+600px = 37.5em
+900px = 56.25em
+1200px = 75em
+1800px = 112.5em
+*/
+
+@mixin respond-to-viewport($breakpoint) {
+  // For small phone
+  @if $breakpoint == small-phone {
+    @media (max-width: 30em) {
+      @content;
+    }
+  }
+  // For phone
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  // For tablet : portriat
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  // For tablet : landscape
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  // For big desktop
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
