@@ -15,6 +15,16 @@
     z-index: 2000;
     text-align: center;
     cursor: pointer;
+
+    @include respond-to-viewport(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond-to-viewport(tab-port) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__background {
@@ -30,6 +40,16 @@
     );
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond-to-viewport(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond-to-viewport(phone) {
+      top: 3.3rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {

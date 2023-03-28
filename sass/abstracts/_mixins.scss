@@ -41,13 +41,15 @@
 1800px = 112.5em
 */
 
+// ORDER : base > typography > general layout > grid > page layout > components
+
 @mixin respond-to-viewport($breakpoint) {
   // For small phone
-  @if $breakpoint == small-phone {
-    @media (max-width: 30em) {
-      @content;
-    }
-  }
+  //   @if $breakpoint == small-phone {
+  //     @media (max-width: 30em) {
+  //       @content;
+  //     }
+  //   }
   // For phone
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {

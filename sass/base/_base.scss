@@ -31,9 +31,9 @@ html {
     font-size: 45%; // 1rem = px; 7.2/16 = 45%
   }
 
-  @include respond-to-viewport(small-phone) {
-    font-size: 31.25%; // 1rem = 5px; 5/16 = 31.25%
-  }
+  // @include respond-to-viewport(small-phone) {
+  //   font-size: 31.25%; // 1rem = 5px; 5/16 = 31.25%
+  // }
 
   @include respond-to-viewport(big-desktop) {
     font-size: 75%; // 1rem = 12px; 12/16 = 75%
@@ -43,4 +43,8 @@ html {
 body {
   padding: 3rem;
   box-sizing: border-box;
+
+  @include respond-to-viewport(tab-port) {
+    padding: 0;
+  }
 }
