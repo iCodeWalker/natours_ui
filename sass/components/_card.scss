@@ -184,7 +184,9 @@
     font-weight: 100;
   }
 
-  @include respond-to-viewport(tab-port) {
+  // @include respond-to-viewport(tab-port) {
+  // added a condition that if the device has no hover ability than apply these styles
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
